@@ -1,6 +1,6 @@
 name: event
 on: 
-  pull_request: :
+  pull_request: 
     branches: 
     - feature
 jobs:
