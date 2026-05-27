@@ -1,7 +1,10 @@
 CONCEPTS IN GITHUB ACTION
+
 1.structure of workflow
+
 2.event and triggers
  2.1 types of Event & triggers,
+
 GitHub Actions Triggers
 │
 ├── 1. Manual Triggers
