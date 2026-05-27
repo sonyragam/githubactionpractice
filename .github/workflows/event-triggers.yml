@@ -1,0 +1,11 @@
+name: event
+on: 
+  push:
+    branches: 
+    - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: onestep
+        run: echo " Event Triggered from ${{github.ref_name}}
