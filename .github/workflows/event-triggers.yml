@@ -1,11 +1,20 @@
 name: event
 on: 
-  push:
+  push: 
     branches: 
     - main
+  pull_request: 
+   types: opened
+   branches:
+     - feature        
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: onestep
         run: echo " Event Triggered from ${{github.ref_name}} "
+  feature:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testfeature branch on pullrequest
+        run: echo "executing"
