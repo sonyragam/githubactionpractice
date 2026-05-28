@@ -8,7 +8,7 @@ on:
     types:
       - reopened
       - synchronize
-      - closed
+      - ready_for_review
 
 jobs:
   test:
@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: pull-request-closed
         if: github.event.pull_request.merged == true
-        run: echo "This workflow is triggered because a pull request was closed and merged"
+        run: echo "PR is ready for review, starting validation pipeline"
