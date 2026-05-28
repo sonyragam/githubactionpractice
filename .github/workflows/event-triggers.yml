@@ -12,9 +12,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest.
 
     steps:
       - name: pull-request-closed
-        if: github.event.pull_request.merged == true
+        if: github.event.pull_request.commits == true
         run: echo "This workflow is triggered because a pull request was closed and merged"
