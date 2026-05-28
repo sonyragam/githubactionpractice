@@ -1,13 +1,19 @@
 name: event
-on: 
-  pull_request: 
-    branches: 
-    - main
-    types: 
-    - reopened
+
+on:
+  pull_request:
+    branches:
+      - main
+
+    types:
+      - reopened
+      - closed
+
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: onestep
-        run: echo " Event Triggered by ${{github.actor}} "
+      - name: pull-request-closed
+        if: github.event.pull_request.merged == true
+        run: echo "This workflow is triggered because a pull request was closed and merged"
