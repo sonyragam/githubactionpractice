@@ -10,6 +10,7 @@ GitHub Actions Triggers
     i) workflow_dispatch
 
 2. Event-Based Triggers
+
      i)   push
      ii)  pull_request
      iii) issues
