@@ -16,5 +16,5 @@ jobs:
 
     steps:
       - name: pull-request-closed
-        if: github.event.pull_request.commits == true
+        if: github.event.pull_request.merged == true
         run: echo "This workflow is triggered because a pull request was closed and merged"
