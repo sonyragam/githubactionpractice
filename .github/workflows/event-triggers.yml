@@ -7,7 +7,7 @@ on:
 
     types:
       - reopened
-      - closed
+      - synchronize
 
 jobs:
   test:
