@@ -18,4 +18,4 @@ jobs:
         if: always()
         run: |
           echo "Job Status: ${{ job.status }}"
-          echo "job container:${{job.container}}
+          echo "job container:${{job.container}}"
