@@ -8,11 +8,11 @@ jobs:
    steps:
      - name: github_context_properties
        run: |
-        echo "Actor: ${{ github.actor }}"
-        echo "Repository: ${{ github.repository }}"
-        echo "Branch: ${{ github.ref }}"
-        echo "Branch Name: ${{ github.ref_name }}"
-        echo "Commit SHA: ${{ github.sha }}"
-        echo "Workflow: ${{ github.workflow }}"
-        echo "Event: ${{ github.event_name }}"
-        echo "Run Number: ${{ github.run_number }}"
+         echo "Actor: ${{ github.actor }}"
+         echo "Repository: ${{ github.repository }}"
+         echo "Branch: ${{ github.ref }}"
+         echo "Branch Name: ${{ github.ref_name }}"
+         echo "Commit SHA: ${{ github.sha }}"
+         echo "Workflow: ${{ github.workflow }}"
+         echo "Event: ${{ github.event_name }}"
+         echo "Run Number: ${{ github.run_number }}"
