@@ -1,0 +1,16 @@
+name: test
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+     - name: test-step
+       run: echo "test me"
+     - name: shell-script
+       run: |
+        pwd
+        whoami
+        date
+        uname -a
+      
+  
