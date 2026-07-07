@@ -1,0 +1,30 @@
+name: needs Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    outputs:
+      Info: ${{ steps.Info.outputs.context }}
+      
+    steps:
+
+      - name: Generate info
+        id: Info
+
+        run: |
+          echo "context=I'm learning steps context" >> $GITHUB_OUTPUT
+  demo2:
+   runs-on: ubuntu-22.04
+   needs: demo
+   steps:
+     - name: output
+       run: |
+        echo "job1output: ${{ needs.demo.outputs.Info }}" 
+        echo "result: ${{needs.demo.result}}
+    
+   
+ 
+          
