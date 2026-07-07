@@ -1,0 +1,36 @@
+name: Env Context Demo
+
+on:
+  workflow_dispatch:
+
+# Workflow-level environment variables
+env:
+  NAME: Sony
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+
+    # Job-level environment variables
+    env:
+      JOB_NAME: one
+      PORT: 8080
+
+    steps:
+      - name: Print Workflow and Job Env
+        run: |
+          echo "Name: ${{ env.NAME }}"
+          echo "Job Name: ${{ env.JOB_NAME }}"
+          echo "Port: ${{ env.PORT }}"
+
+      - name: Print Step Env
+        env:
+          VERSION: 0.1
+        run: |
+          echo "Name: ${{ env.NAME }}"
+          echo "Job Name: ${{ env.JOB_NAME }}"
+          echo "Version: ${{ env.VERSION }}"
+ 
+
+
+  
