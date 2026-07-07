@@ -23,7 +23,7 @@ jobs:
      - name: output
        run: |
         echo "job1output: ${{ needs.demo.outputs.Info }}" 
-        echo "result: ${{needs.demo.result}}
+        echo "result: ${{needs.demo.result}}"
     
    
  
