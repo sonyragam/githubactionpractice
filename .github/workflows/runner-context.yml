@@ -1,0 +1,18 @@
+name: Runner Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Runner Information
+        run: |
+          echo "OS: ${{ runner.os }}"
+          echo "Architecture: ${{ runner.arch }}"
+          echo "Runner Name: ${{ runner.name }}"
+          echo "Temporary Folder: ${{ runner.temp }}"
+          echo "Tool Cache: ${{ runner.tool_cache }}"
+          echo "Environment: ${{ runner.environment }}"
