@@ -1,0 +1,9 @@
+Expression	                      Meaning
+${{ github.actor }}	     Username of the person who triggered the workflow
+${{ github.repository }}     Repository name (owner/repo)
+${{ github.ref }}	     Full Git reference (for example, refs/heads/main)
+${{ github.ref_name }}	     Short branch or tag name (for example, main)
+${{ github.sha }}	     Commit SHA
+${{ github.workflow }}	     Workflow name
+${{ github.event_name }}     Triggering event (push, pull_request, etc.)
+${{ github.run_number }}     Workflow run number
