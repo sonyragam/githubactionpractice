@@ -1,0 +1,25 @@
+name: Env Precedence Demo
+
+on:
+  workflow_dispatch:
+
+env:
+  APP_NAME: Workflow-App
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: Job-App
+
+    steps:
+      - name: Step 1
+        env:
+          APP_NAME: Step-App
+        run: |
+          echo "APP_NAME = ${{ env.APP_NAME }}"
+
+      - name: Step 2
+        run: |
+          echo "APP_NAME = ${{ env.APP_NAME }}"
