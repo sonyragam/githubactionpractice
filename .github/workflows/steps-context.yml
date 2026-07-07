@@ -19,3 +19,8 @@ jobs:
 
         run: |
           echo "Info = ${{ steps.Info.outputs.context }}"
+
+      - name: status
+        run: | 
+          echo "job status: ${{steps.Info.outcome}}
+      
