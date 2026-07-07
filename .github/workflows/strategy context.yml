@@ -1,0 +1,35 @@
+name: Strategy Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        version:
+          - 18
+          - 20
+
+        include:
+          - os: macos-latest
+            version: 22
+
+        exclude:
+          - os: windows-latest
+            version: 18
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Print Strategy Values
+        run: |
+          echo "Operating System : ${{ matrix.os }}"
+          echo "Version          : ${{ matrix.version }}"
