@@ -1,0 +1,21 @@
+name: Steps Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Generate Version
+        id: Info
+
+        run: |
+          echo "context=I'm learning steps context" >> $GITHUB_OUTPUT
+
+      - name: Print Version
+
+        run: |
+          echo "info = ${{ steps.version.outputs.context }}"
