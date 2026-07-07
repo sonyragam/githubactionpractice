@@ -18,4 +18,4 @@ jobs:
       - name: Print Version
 
         run: |
-          echo "info = ${{ steps.version.outputs.context }}"
+          echo "Info = ${{ steps.Info.outputs.context }}"
