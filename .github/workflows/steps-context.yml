@@ -22,5 +22,6 @@ jobs:
 
       - name: status
         run: | 
-          echo "jobstatus: ${{steps.Info.outcome}}"
+          echo "outcome: ${{steps.Info.outcome}}"
+          echo "Conclusion: ${{ steps.Info.conclusion }}"
       
