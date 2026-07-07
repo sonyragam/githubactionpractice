@@ -1,0 +1,40 @@
+name: Matrix Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  matrix-demo:
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        environment:
+          - dev
+          - qa
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+      - name: Print Matrix Values
+        shell: bash
+        run: |
+          echo "Runner OS        : ${{ matrix.os }}"
+          echo "Environment      : ${{ matrix.environment }}"
+
+      - name: Show Runner Details
+        shell: bash
+        run: |
+          echo "Operating System : $RUNNER_OS"
+          echo "Runner Name      : $RUNNER_NAME"
+          echo "Workspace        : $GITHUB_WORKSPACE"
+
+      - name: Simulate Deployment
+        shell: bash
+        run: |
+          echo "Deploying application to ${{ matrix.environment }}"
+          echo "Deployment completed."
